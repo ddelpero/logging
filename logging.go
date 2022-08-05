@@ -10,8 +10,8 @@ import (
 var LogFileName string
 var logDate time.Time
 
-//SetLogFIle set name of file that will need to rotate
-func SetLogFile(fileName string) {
+//SetLogFileName set name of file that will need to rotate
+func SetLogFileName(fileName string) {
 	LogFileName = fileName
 	logDate = time.Now()
 }
