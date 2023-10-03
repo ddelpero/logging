@@ -23,13 +23,14 @@ func SetLogFileName(fileName string) {
 
 //rotate call this before logging to check if file needs to be rotated
 //simple rotation based on day changing
-func rotate() {
+func rotate() string {
 	newLogFileName := ""
 	if time.Now().Day() != logDate.Day() {
 		newLogFileName = fmt.Sprintf("%s.%s.log", strings.Replace(LogFileName, ".log", "", 1), time.Now().Format("2006-01-02"))
 		logDate = time.Now()
 		os.Rename(LogFileName, newLogFileName)
 	}
+	return newLogFileName;
 }
 
 func ZipLog(newLogFileName string) {
