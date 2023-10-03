@@ -1,7 +1,12 @@
 package logging
 
 import (
+	"archive/zip"
+	"fmt"
+	"io"
 	"os"
+	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/nuveo/log"
