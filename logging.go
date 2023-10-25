@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nuveo/log"
+	"github.com/ddelpero/log"
 )
 
 var LogFileName string
