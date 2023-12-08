@@ -35,7 +35,7 @@ func rotate() string {
 
 func ZipLog(newLogFileName string) {
 	//archive log file
-	archiveLogFileName := LogFileName + "." + time.Now().Format("2006-02-01")
+	archiveLogFileName := LogFileName + "." + time.Now().Format("2006-01-02")
 	archive, err := os.Create(archiveLogFileName + ".zip")
 	if err != nil {
 		log.Errorln("Error creating archive log file: ", err)
